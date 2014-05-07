@@ -1,0 +1,19 @@
+extends ../shared/template
+
+block content
+
+  header
+    h1#title Pets
+
+  #controls
+    a(href='/pets/new').button Add a pet!
+
+  #pets
+    each pet in pets
+      a(href='/pets/#{pet._id}').pet
+        .delete
+          form(action='/pets/#{pet._id}/delete', method='POST')
+            button#delete(href='#') X
+        #name
+          h3 #{pet.name}
+        img(src='/img/#{pet.photo}')

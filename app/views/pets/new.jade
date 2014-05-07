@@ -1,0 +1,29 @@
+extends ../shared/template
+
+block content
+
+  header
+    h1#title Create Pet!
+
+  form(method='POST', action='/pets')
+    input(name='name', type='text', placeholder='Name')
+
+    input(name='age', type='text', placeholder='Age')
+
+    select(name='gender')
+      option Male
+      option Female
+
+    select(name='species')
+      option Cat
+      option Dolphin
+      option Duck
+      option Frog
+      option Giraffe
+      option Kangaroo
+      option Monkey
+      option Owl
+      option Rhino
+      option Tiger
+
+    button ADD

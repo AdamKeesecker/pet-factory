@@ -3,9 +3,21 @@ html
   head
     meta(charset='utf-8')
     title= title
+    link(href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,700', rel='stylesheet', type='text/css')
     link(href='/css/buttons.css', rel='stylesheet')
     link(href='/less/app.css', rel='stylesheet')
-  body
+  body(style='background-image:url(/img/#{bg}); background-size:cover;')
+
+    nav#nav
+      ul
+        li
+          a(href='/') Home
+        li
+          a(href='/about') About
+        li
+          a(href='/contact') Contact Us
+        li
+          a(href='/pets') Pets
     block content
 
     script(src='/js/vendor/jquery-2.1.1.js')

@@ -1,0 +1,12 @@
+extends ../shared/template
+
+block content
+
+  header
+    h1#title= pet.name
+
+    a(href='/pets/#{pet._id}').pet
+      #name
+        h3 Species: #{pet.species}
+        h3 Age: #{pet.age}
+      img(src='/img/#{pet.photo}')
